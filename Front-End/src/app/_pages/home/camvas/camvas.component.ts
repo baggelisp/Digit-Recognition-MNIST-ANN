@@ -18,8 +18,8 @@ export class CamvasComponent implements OnInit {
 
   constructor() { }
 
-  @Input() public width = 400;
-  @Input() public height = 400;
+  @Input() public width = 420;
+  @Input() public height = 420;
 
   @Output() drawnCanvas = new EventEmitter();
   // ngOnInit(): void {

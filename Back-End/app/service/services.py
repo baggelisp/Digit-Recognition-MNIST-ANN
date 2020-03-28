@@ -7,9 +7,11 @@ from keras.utils import to_categorical
 import matplotlib.pyplot as plt # Graph
 import statistics
 from keras.models import load_model
+from keras import backend as K
 
 #imageToPredict is an array [728]
 def predictDigitNumber(imageToPredict):
+    K.clear_session()
     #import model
     # Load the model from disk later using:
     # Build the model.

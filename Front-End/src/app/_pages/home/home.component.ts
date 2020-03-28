@@ -9,6 +9,7 @@ import { RequestsService } from '../../_services/requests.service';
 export class HomeComponent implements OnInit {
 
   dataBlack;
+  prediction;
 
   constructor(private requestsService: RequestsService) { }
 
@@ -18,7 +19,6 @@ export class HomeComponent implements OnInit {
   drawnCanvasChange(event){
     this.dataBlack = event.data
     this.requestOnBackEnd()
-
   }
 
   requestOnBackEnd(){
@@ -27,9 +27,8 @@ export class HomeComponent implements OnInit {
       data:  this.dataBlack
     }
     this.requestsService.postRequest(body).subscribe(res =>{
-      console.log('req insidecomp')
-
       console.log(res)
+      this.prediction = res;
     })
   }
 
