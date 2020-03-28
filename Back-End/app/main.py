@@ -2,6 +2,8 @@ from flask import Flask,request,jsonify
 from flask_cors import CORS
 from service.services import predictDigitNumber
 from service.services import transformData
+from service.services import transformData2
+import numpy as np 
 
 app = Flask(__name__)
 CORS(app)
@@ -16,8 +18,14 @@ def home():
 def canvasArray():
     req_data = request.get_json()
     blackArray = req_data['data']
-    tranformedData = transformData(blackArray)
+    #tranformedData = transformData(blackArray)
+    tranformedData = transformData2(blackArray)
+
     predictedValue = predictDigitNumber(tranformedData)
-    return str(predictedValue)
+    #return str(predictedValue)
+    return jsonify(
+        predictedValue=str(predictedValue),
+        tranformedData=np.array(tranformedData).reshape((28, 28)).tolist()
+    )
 
 app.run()

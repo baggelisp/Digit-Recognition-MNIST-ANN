@@ -16,11 +16,9 @@ export class RequestsService {
   postRequest(body){
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Authorization': 'my-auth-token'
+        'Content-Type':  'application/json'
       })
     }
-    console.log('req')
     return this.http.post<any>(environment.apiUrl, body, httpOptions)
   }
 }

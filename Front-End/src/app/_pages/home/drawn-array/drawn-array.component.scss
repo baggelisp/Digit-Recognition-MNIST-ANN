@@ -1,0 +1,31 @@
+.tableContainer{
+    border: 2px solid black; 
+    width: 420px; 
+    height: 420px;
+}
+
+.flex-start{
+    display: flex;
+    justify-content: start;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.elem{
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+}
+
+.back-black{
+    background-color: black;
+    color: white;
+}
+
+.back-white{
+    background-color: white;
+    color: black;
+}

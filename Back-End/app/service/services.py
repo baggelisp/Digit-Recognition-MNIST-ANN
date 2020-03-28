@@ -34,4 +34,15 @@ def transformData(input_data):
         meanValue = statistics.mean(tempList) 
         tranformedData.append(meanValue * 255)
     return tranformedData
-    
+
+def transformData2(input_data):
+    fullList = []
+    for i in range(0, len(input_data), 420):
+        fullList.append(input_data[i:i+420])
+    fullArray = np.asarray(fullList)
+    tempArray = []
+    for i in range (0, fullArray.shape[0], 15):
+        for j in range (0,fullArray.shape[1], 15):
+            print (fullArray[1,1])
+            tempArray.append(fullArray[i,j].mean() * 255)  
+    return tempArray

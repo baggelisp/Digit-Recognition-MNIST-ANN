@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './_pages/home/home.component';
 import { CamvasComponent } from './_pages/home/camvas/camvas.component';
 import { LayoutComponent } from './_layout/layout/layout.component';
+import { DrawnArrayComponent } from './_pages/home/drawn-array/drawn-array.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CamvasComponent,
-    LayoutComponent
+    LayoutComponent,
+    DrawnArrayComponent
   ],
   imports: [
     BrowserModule,
