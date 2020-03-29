@@ -8,6 +8,8 @@ import { HomeComponent } from './_pages/home/home.component';
 import { CamvasComponent } from './_pages/home/camvas/camvas.component';
 import { LayoutComponent } from './_layout/layout/layout.component';
 import { DrawnArrayComponent } from './_pages/home/drawn-array/drawn-array.component';
+import { PredictionChartComponent } from './_pages/home/prediction-chart/prediction-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { DrawnArrayComponent } from './_pages/home/drawn-array/drawn-array.compo
     HomeComponent,
     CamvasComponent,
     LayoutComponent,
-    DrawnArrayComponent
+    DrawnArrayComponent,
+    PredictionChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
