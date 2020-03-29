@@ -83,14 +83,17 @@ model.save_weights('../model/model.h5')
 # loaded_model.load_weights("model.h5")
 # print("Loaded model from disk")
 
-# #Make predictions
-# # Predict on the first 5 test images.
-# # Keep in mind that the output of our network is 10 probabilities, 
-# #   so we'll use np.argmax()to turn those into actual digits
-# predictions = model.predict(test_images[:5])
-# #print(predictions)
-# print (np.argmax(predictions, axis =1))
-# print(test_labels[:5])
+#Make predictions
+# Predict on the first 5 test images.
+# Keep in mind that the output of our network is 10 probabilities, 
+#   so we'll use np.argmax()to turn those into actual digits
+np.set_printoptions(suppress=True)
+print ('Predictttttttttttttttttttttttttttt')
+print (test_images[:1])
+predictions = model.predict(test_images[:1])
+print(predictions)
+print (np.argmax(predictions, axis =1))
+print(test_labels[:5])
 
 
 # import matplotlib.pyplot as plt

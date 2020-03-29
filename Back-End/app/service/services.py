@@ -24,7 +24,9 @@ def predictDigitNumber(imageToPredict):
     imageToPredict = np.array([imageToPredict])
     # Make prediction
     predictions = model.predict(imageToPredict[:1])
-    return predictions[0] # return all predicts
+    print(predictions)
+    #return np.argmax(predictions, axis =1)[0]
+    return predictions[0]
 
 def transformData(input_data):
     step = len(input_data)//784
@@ -36,6 +38,7 @@ def transformData(input_data):
     return tranformedData
 
 def transformData2(input_data):
+    np.set_printoptions(suppress=True)
     fullList = []
     for i in range(0, len(input_data), 420):
         fullList.append(input_data[i:i+420])
@@ -43,5 +46,7 @@ def transformData2(input_data):
     tempArray = []
     for i in range (0, fullArray.shape[0], 15):
         for j in range (0,fullArray.shape[1], 15):
-            tempArray.append(fullArray[i,j].mean() * 255)  
-    return tempArray
+            tempArray.append(fullArray[i:i+15,j:j+15].mean()) 
+
+    scaledArray = list(map(lambda x: x-0.5 , tempArray)) 
+    return scaledArray
