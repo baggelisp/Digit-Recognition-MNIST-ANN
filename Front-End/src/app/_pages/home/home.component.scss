@@ -1,0 +1,43 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 5%;
+}
+
+.down-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.center-container{
+    display: flex;
+    align-items: center;
+}
+
+.button-predict{
+    background-color: #088EFA;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+}
+
+.clean-predict{
+    background-color: #F35134;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+.left-container {
+    min-width:calc(100% - 424px);
+}
+
+.right-container{
+    min-width: 424px;
+}

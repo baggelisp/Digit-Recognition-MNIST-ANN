@@ -1,7 +1,10 @@
 .tableContainer{
     border: 2px solid black; 
-    width: 420px; 
-    height: 420px;
+    width: 424px; 
+    height: 424px;
+    border-radius: 10px;
+    background: black;
+    border: 2px solid #00000029;
 }
 
 .flex-start{
@@ -18,11 +21,13 @@
     height: 15px;
     width: 15px;
     line-height: 15px;
+    
 }
 
 .back-black{
     background-color: black;
     color: white;
+    border-radius: 10px;
 }
 
 .back-white{

@@ -12,6 +12,7 @@ export class DrawnArrayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.drawnArray = new Array(28).fill(Array(28).fill(0));
   }
 
 }

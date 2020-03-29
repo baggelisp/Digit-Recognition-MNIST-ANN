@@ -98,8 +98,6 @@ export class CamvasComponent implements OnInit {
         dataBlack.push(0)
       }
     }
-    console.log(dataBlack)
-
     this.drawnCanvas.emit({ data: dataBlack });
 
     // len of data black is 400x400 = 160000

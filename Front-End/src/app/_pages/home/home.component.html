@@ -1,10 +1,33 @@
-<p>home works!</p>
 
-<app-camvas (drawnCanvas)='drawnCanvasChange($event)'>
 
-</app-camvas>
 
-<h1>Prediction: {{prediction}}</h1>
 
-<app-drawn-array [drawnArray]='tranformedData'></app-drawn-array>
 
+
+
+<div class="wrapper">
+    <div class="left-container">
+        <app-camvas (drawnCanvas)='drawnCanvasChange($event)'></app-camvas>
+    </div>
+
+    <!-- <div class="center-container">
+        <div>
+            <div>
+                <button class="button-predict">Predict</button>
+            </div>
+            <div>
+                <button class="clean-predict">Clean</button>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class="right-container">
+        <app-drawn-array [drawnArray]='tranformedData'></app-drawn-array>
+    </div>
+
+</div>
+
+<div class="down-wrapper">
+    <h1>Prediction: {{prediction}}</h1>
+</div>
