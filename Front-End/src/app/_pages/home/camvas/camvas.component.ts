@@ -22,9 +22,6 @@ export class CamvasComponent implements OnInit {
   @Input() public height = 420;
 
   @Output() drawnCanvas = new EventEmitter();
-  // ngOnInit(): void {
-  //   this.ctx = this.canvas.nativeElement.getContext('2d');
-  // }
 
   ngOnInit() {
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;

@@ -3,6 +3,9 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+$fa-font-path: "~font-awesome/fonts";
+ @import '~font-awesome/scss/font-awesome';
+
 body{
     font-family: 'Montserrat', sans-serif;
 }

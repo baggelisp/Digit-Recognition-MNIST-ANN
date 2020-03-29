@@ -13,3 +13,32 @@
     padding: 0 10%;
     border-bottom: 1px solid rgba(34,90,89,0.2);
 }
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    padding: 0 20px;
+    a{
+        color: black;
+    }
+}
+
+li:not(:last-child){
+    border-right: 2px solid;
+}
+
+
+.bottom-bar{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(34, 90, 89, 0.2);
+}

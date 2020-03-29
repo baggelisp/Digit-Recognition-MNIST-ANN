@@ -28,9 +28,8 @@ export class HomeComponent implements OnInit {
       data:  this.dataBlack
     }
     this.requestsService.postRequest(body).subscribe(res =>{
-      console.log(res.predictedValue)
       this.prediction = res.predictedValue;
-      this.tranformedData = res.tranformedData.map(x => x.map( a => a / 255));
+      this.tranformedData = res.tranformedData.map(x => x.map( a => a + 0.5));
     })
   }
 

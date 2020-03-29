@@ -1,11 +1,11 @@
 <div>
-    <h2>Array of data:</h2>
+    <h2>Array (28x28) of data:</h2>
     <div class="tableContainer">
         <ng-container *ngIf='drawnArray'>
             <div *ngFor="let row of drawnArray" class="flex-start">
                 <div *ngFor="let item of row" >
-                    <div  class="elem flex-center" [ngClass]="{'back-black': item==0, 'back-white': item==1}">
-                        {{item}}
+                    <div  class="elem flex-center" [ngStyle]="{'opacity': item}" [ngClass]="{'back-black': item<0.5, 'back-white': item>0.5}">
+                          
                     </div>
                 </div>
             </div>

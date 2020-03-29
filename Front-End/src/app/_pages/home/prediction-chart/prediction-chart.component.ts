@@ -1,5 +1,6 @@
 import { Component, OnInit , Input, OnChanges, SimpleChanges, SimpleChange} from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-prediction-chart',
@@ -10,31 +11,61 @@ export class PredictionChartComponent implements OnInit {
 
   @Input() predictions;
 
+  predictionNumber;
+
   constructor() { }
 
-  public doughnutChartLabels = ['0', '1', '2', '3','4', '5', '6', '7', '8', '9'];
-  public doughnutChartData = [10,10,10,10,10,10,10,10,10,10];
-  public doughnutChartType = 'doughnut';
+  public pieChartLabels: Label[] =['0', '1', '2', '3','4', '5', '6', '7', '8', '9'];
+  public pieChartData = [10,10,10,10,10,10,10,10,10,10];
+  public pieChartType: ChartType =  'pie';
+  public pieChartLegend = true;
+  public pieChartOptions = {
+    legend: {
+      position: 'left'
+    }
+  }
+
+  public barChartOptions: ChartOptions = {
+    responsive: true,
+  };
+  public barChartLabels: Label[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  public barChartType: ChartType = 'horizontalBar';
+  public barChartLegend = true;
+  public barChartPlugins = [];
+  public barChartData: ChartDataSets[] = [
+    { data: [10,10,10,10,10,10,10,10,10,10], label: 'Prediction (%)' },
+  ];
+
 
   ngOnInit(): void {
-   // console.log('Inside chart', this.predictions)
-    //this.doughnutChartData = this.predictions.map(x => x * 100);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    //const currentItem: SimpleChange = changes.item;
     if (changes.predictions.currentValue){
       let predString = changes.predictions.currentValue;
       predString = predString.replace('[','')
       predString = predString.replace(']','')
-      let predArray = predString.split(' ')
-      //console.log(predArray)
-      // console.log(predString)
-      // console.log(typeof predString)
-      //predString = predString.replace('[','')
+      let predArray = predString.split(' ').filter(elem => elem != '');
+      predArray = predArray.map(x => x = parseFloat(x).toFixed(4));
+      this.predictionNumber = this.rIndexOfMaxElem(predArray);
+      this.pieChartData = predArray.map(x => x * 100);
+      this.barChartData = [
+        { data: this.pieChartData, label: 'Prediction (%)' },
+      ];
     }
-    //console.log('prev value: ', changes.predictions.currentValue);
-    //console.log('got item: ', currentItem.currentValue);
+  }
+
+  rIndexOfMaxElem(matrix){
+    let i;
+    let max = -1;
+    let indMax = -1;
+    for (i = 0; i < matrix.length; i++) {
+      if (matrix[i] > max) { 
+        max = matrix[i];
+        indMax = i;
+      }
+    }
+    return indMax;
   }
 
 }

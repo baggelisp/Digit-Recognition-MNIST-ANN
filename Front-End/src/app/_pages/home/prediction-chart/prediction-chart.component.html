@@ -1,9 +1,27 @@
 
-<h1>Prediction: {{prediction}}</h1>
 
+
+<h1 class="text-center">Prediction: {{predictionNumber}}</h1>
+<div class="flex-between">
 <div style="display: block">
     <canvas baseChart  width="400" height="400"
-                [data]="doughnutChartData"
-                [labels]="doughnutChartLabels"
-                [chartType]="doughnutChartType"></canvas>
-  </div>
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [options]="pieChartOptions"
+                [legend]="pieChartLegend"></canvas>
+    </div>
+    <div style="display: block;">
+    <canvas baseChart  width="400" height="400"
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+    </canvas>
+    </div>
+</div>
+
+
+  
