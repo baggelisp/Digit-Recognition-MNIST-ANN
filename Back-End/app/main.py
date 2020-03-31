@@ -28,4 +28,6 @@ def canvasArray():
         tranformedData=np.array(tranformedData).reshape((28, 28)).tolist()
     )
 
-app.run()
+if __name__=="__main__":
+    print('Server Running...')
+    app.run()
