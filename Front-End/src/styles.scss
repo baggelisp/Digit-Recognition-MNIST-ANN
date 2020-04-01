@@ -9,3 +9,28 @@ $fa-font-path: "~font-awesome/fonts";
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+.modal.show .modal-dialog{
+    width: 80%;
+    height: 80%;
+    max-width: 80%;
+}
+
+.modal-content{
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+button:focus{
+    outline: none!important;
+}
+
+button:active{
+    opacity: 0.9;
+
+}
+
+a:active{
+    opacity: 0.9;
+}

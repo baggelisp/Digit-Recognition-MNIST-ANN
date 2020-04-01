@@ -10,6 +10,8 @@ import { LayoutComponent } from './_layout/layout/layout.component';
 import { DrawnArrayComponent } from './_pages/home/drawn-array/drawn-array.component';
 import { PredictionChartComponent } from './_pages/home/prediction-chart/prediction-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './_components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { ChartsModule } from 'ng2-charts';
     CamvasComponent,
     LayoutComponent,
     DrawnArrayComponent,
-    PredictionChartComponent
+    PredictionChartComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    NgbModule
     
   ],
   providers: [],

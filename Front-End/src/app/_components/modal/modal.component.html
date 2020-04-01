@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title">                        <i class="fa fa-info-circle"></i> Help
+    </h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <iframe class="iframe-class"  src="https://www.youtube.com/embed/BdFO0Tg48FQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <iframe  class="iframe-class" src="https://youtu.be/BdFO0Tg48FQ" frameborder="0" allowfullscreen></iframe> -->
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
