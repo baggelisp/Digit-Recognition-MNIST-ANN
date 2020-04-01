@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath Back-End/api app:app
+web: gunicorn --pythonpath Back-End app:app
