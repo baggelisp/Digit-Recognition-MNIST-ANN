@@ -12,6 +12,7 @@ import { PredictionChartComponent } from './_pages/home/prediction-chart/predict
 import { ChartsModule } from 'ng2-charts';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './_components/modal/modal.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModalComponent } from './_components/modal/modal.component';
     AppRoutingModule,
     HttpClientModule,
     ChartsModule,
-    NgbModule
+    NgbModule,
+    NgxSpinnerModule
     
   ],
   providers: [],

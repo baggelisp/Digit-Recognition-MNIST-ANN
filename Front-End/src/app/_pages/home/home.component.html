@@ -1,6 +1,8 @@
 
 
-
+  <div class="wrapper"  *ngIf='errorMessage'>
+    <ngb-alert (close)="closeAlert()" style="width: 100%;" [type]="'danger'" >{{errorMessage}}</ngb-alert>
+  </div>
 
 
 
@@ -31,3 +33,14 @@
 <div class="down-wrapper">
     <app-prediction-chart style="width: 60%;" [predictions]='prediction'></app-prediction-chart>
 </div>
+
+
+<ngx-spinner
+bdColor = "#333333ed"
+size = "medium"
+color = "#fff"
+type = "square-jelly-box"
+[fullScreen] = "true"
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
