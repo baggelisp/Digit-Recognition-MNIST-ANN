@@ -4,25 +4,12 @@ services:
     build:
       context: ./Back-End/
       dockerfile: dockerfiles/Dockerfile
-    # environment:
-    #   - PORT=3000
     ports:
       - "5000:5000"
-    # networks:
-    #   - digit_recognition
 
   front-end:
     build:
       context: ./Front-End/
       dockerfile: dockerfiles/Dockerfile
     ports:
-      - 8000:80
-    links:
-      - back-end
-    # networks:
-    #   - digit_recognition
-
-# networks:
-#   digit_recognition:
-    #driver: bridge
-    # external: true 
+      - 80:80

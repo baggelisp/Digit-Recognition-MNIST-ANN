@@ -7,7 +7,6 @@ from keras.utils import to_categorical
 import matplotlib.pyplot as plt # Graph
 #from keras.models import model_from_json
 
-
 #Load the data set
 train_images = mnist.train_images() # training data of images
 train_labels = mnist.train_labels() # training data of the labels
