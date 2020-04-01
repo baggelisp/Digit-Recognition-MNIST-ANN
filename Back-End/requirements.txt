@@ -5,3 +5,4 @@ matplotlib==3.2.1
 mnist==0.2.2
 numpy==1.18.2
 tensorflow==1.14.0
+gunicorn==20.0.4
