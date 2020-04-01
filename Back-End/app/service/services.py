@@ -21,7 +21,7 @@ def predictDigitNumber(imageToPredict):
      Dense(10, activation='softmax'),
     ])
     model.load_weights('model/model.h5') # running on localhost
-    # model.load_weights('app/model/model.h5') # running with docker
+    #model.load_weights('app/model/model.h5') # running with docker
     imageToPredict = np.array([imageToPredict])
     # Make prediction
     predictions = model.predict(imageToPredict[:1])
