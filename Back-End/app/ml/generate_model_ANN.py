@@ -62,7 +62,7 @@ model.fit(
 # )
 
 #save the model to disk
-model.save_weights('../model/model.h5')
+model.save_weights('../ml-model/model.h5')
 
 
 # serialize model to JSON
