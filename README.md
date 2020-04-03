@@ -20,10 +20,10 @@ With 3 layers, 2 with 64 neurons and activation function = relu and  1 layer wit
 
 ## Examples
 
-1)
+1.
 ![Example 1](images/screenshot1.png)
-2)
+2.
 ![Example 2](images/screenshot2.png)
-3)
+3.
 ![Example 3](images/screenshot3.png)
 
