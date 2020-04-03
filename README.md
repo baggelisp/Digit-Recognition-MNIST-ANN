@@ -19,6 +19,7 @@ Keras
 With 3 layers, 2 with 64 neurons and activation function = relu and  1 layer with 10 neurons with activation function= softmax
 
 ## Examples
+
 1)
 ![Example 1](images/screenshot1.png)
 2)
