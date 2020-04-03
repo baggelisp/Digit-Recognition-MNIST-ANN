@@ -11,12 +11,18 @@ In this project, we train our own ANN with one hidden layer using backpropagatio
 Information and documentation of the dataset can be found on: http://yann.lecun.com/exdb/mnist/
 
 ## Technologies
-Backend with Python Flask (trying approaching MVC design pattern)
-Frontend with Angular 9
+Backend with Python Flask (trying approaching MVC design pattern) <br />
+Frontend with Angular 9 <br />
 Keras
 
 ## ANN model
 With 3 layers, 2 with 64 neurons and activation function = relu and  1 layer with 10 neurons with activation function= softmax
 
 ## Examples
+
+![Example 1](images/screenshot1.png)
+
+![Example 2](images/screenshot2.png)
+
+![Example 3](images/screenshot3.png)
 
