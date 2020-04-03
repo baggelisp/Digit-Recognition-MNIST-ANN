@@ -1,15 +1,9 @@
 from app import app
+from flask import Flask,request,jsonify
+import app.controller.predict_controller as predict_controller
+
 
 @app.route('/predict', methods=['POST'])
 def predictArray():
-    req_data = request.get_json()
-    blackArray = req_data['data']
-    #tranformedData = transformData(blackArray)
-    tranformedData = transformData2(blackArray)
-
-    predictedValue = predictDigitNumber(tranformedData)
-    #return str(predictedValue)
-    return jsonify(
-        predictedValue=str(predictedValue),
-        tranformedData=np.array(tranformedData).reshape((28, 28)).tolist()
-    )
+    return predict_controller.predict_array(request)
+    
