@@ -19,6 +19,6 @@ export class RequestsService {
         'Content-Type':  'application/json'
       })
     }
-    return this.http.post<any>(environment.apiUrl, body, httpOptions)
+    return this.http.post<any>(environment.apiUrl + '/predict', body, httpOptions)
   }
 }
