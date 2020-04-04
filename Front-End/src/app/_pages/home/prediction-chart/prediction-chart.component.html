@@ -1,9 +1,9 @@
 
 
 
-<h1 class="text-center">Prediction: {{predictionNumber}}</h1>
-<div class="flex-between">
-<div style="display: block">
+<h1 class="text-center m-mt-20px">Prediction: {{predictionNumber}}</h1>
+<div class="flex-between m-d-block">
+<div style="display: block" class="m-mt-20px">
     <canvas baseChart  width="400" height="400"
                 [data]="pieChartData"
                 [labels]="pieChartLabels"
@@ -11,15 +11,15 @@
                 [options]="pieChartOptions"
                 [legend]="pieChartLegend"></canvas>
     </div>
-    <div style="display: block;">
-    <canvas baseChart  width="400" height="400"
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
+    <div style="display: block;" class="m-mt-20px">
+        <canvas baseChart  width="400" height="400"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
         [chartType]="barChartType">
-    </canvas>
+        </canvas>
     </div>
 </div>
 
